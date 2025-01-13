@@ -1,3 +1,9 @@
+-=(Popeye_Senhor notes)=-
+
+Tested: Working Video 720p, 1080p & Sound.
+
+Dev notes: The Senhor port does not have the flickering issue of MiSTer's core.
+___
 # Nintendo Popeye port for MiSTer
 
 # Keyboard inputs :
