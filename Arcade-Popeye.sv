@@ -194,7 +194,7 @@ localparam CONF_STR = {
 	"A.POPEYE;;",
 	"H0OEF,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];",
 	//"O35,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;",
-	"O3,Scandoubler,Off,On;",
+	//"O3,Scandoubler,Off,On;",     // Senhor: Disabled - On by default
 	"-;",
 	"DIP;",
 	"-;",
@@ -330,7 +330,8 @@ popeye popeye
 	.video_vs(vs),
 	.video_csync(cs),
 	.video_ce(ce_pix),
-	.tv15Khz_mode(~status[3]),
+	.tv15Khz_mode(status[3]), // Senhor: If enabled it fixes the flickering issue. 
+                             // It was (~status[3]).
 //	.separate_audio(1'b0),
 	.audio_out_l(audio_l),
 	.audio_out_r(audio_r),
